@@ -20,6 +20,10 @@ export class AppComponent{
   rightUrlEntered = false;
   onSearch(){
     console.log(this.videoLink);
+    if(this.videoLink.includes('youtu.be')){
+      const mobileLinkId = this.videoLink.split('/')[(this.videoLink.split('/').length-1)];
+      this.videoLink = `https://www.youtube.com/watch?v=${mobileLinkId}`;
+    }
     const videoID = this.videoLink.split('=')[1];
     if(this.videoLink.split('=').length>1){
       console.log(videoID);
