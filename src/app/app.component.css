@@ -85,7 +85,7 @@
 }
 
 .title{
- background-color: rgb(30, 173, 30);
+ background-color: rgba(255, 0, 0, 0.76);
  margin-bottom: 10px ;
  padding: 10px 20px 10px 20px;
  border-radius: 50px;
@@ -93,14 +93,14 @@
 }
 
 .channel-name{
-    background-color: rgb(209, 181, 23);
+    background-color: rgb(0, 0, 0);
     text-align: center;
     padding: 10px;
     margin-bottom: 10px ;
     border-radius: 50px;
 }
 .download-btn{
-    background-color: rgba(255, 0, 0, 0.76);
+    background-color: rgb(30, 173, 30);
     text-align: center;
     padding: 10px;
     border-radius: 50px;
