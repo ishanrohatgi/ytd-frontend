@@ -1,0 +1,19 @@
+<app-navbar></app-navbar>
+<div class="content">
+  Not having internet access everywhere, keep your important videos with you in your local storage and share it with your friends.
+</div>
+<div class="search-bar">
+<input [(ngModel)]="videoLink" type="url" placeholder="Paste your url here">
+<button (click)="onSearch()"><img src="./../assets/white-search-icon-transparent-background-1.jpg" alt=""></button>
+</div>
+<div class="wrong-url" *ngIf="rightUrlEntered"><p>Please Enter the correct Youtube URL</p></div>
+<div *ngIf="!rightUrlEntered && videoTitle && videoChannel && videoThumbUrl" class="video-details">
+  <div class="thumbnail">
+    <img [src]="videoThumbUrl">
+  </div>
+  <div class="details">
+    <div class="title">{{videoTitle}}</div>
+    <div class="channel-name">{{videoChannel}}</div>
+    <button (click)="download()" class="download-btn">Download</button>
+  </div>
+</div>
