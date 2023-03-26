@@ -50,7 +50,7 @@ export class AppComponent{
   }
 
   download(){
-    this.http.get('http://localhost:3000/', { params: { url: this.videoLink, title : this.videoTitle}, responseType: 'blob' }).subscribe((res: Blob) => {
+    this.http.get('https://ytd-backend-ishanrohatgi.vercel.app/', { params: { url: this.videoLink, title : this.videoTitle}, responseType: 'blob' }).subscribe((res: Blob) => {
       const downloadUrl = URL.createObjectURL(res);
       const link = document.createElement('a');
       link.href = downloadUrl;
