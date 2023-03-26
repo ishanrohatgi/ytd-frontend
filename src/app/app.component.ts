@@ -54,6 +54,7 @@ export class AppComponent{
       const downloadUrl = URL.createObjectURL(res);
       const link = document.createElement('a');
       link.href = downloadUrl;
+      link.type = 'video/mp4';
       link.download = `${this.videoTitle}.mp4`;
       link.click();
     });
