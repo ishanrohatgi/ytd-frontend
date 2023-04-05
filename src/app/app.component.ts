@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HttpClient, HttpResponse} from '@angular/common/http';
+import { HttpClient, HttpResponse, HttpHeaders} from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -54,6 +54,7 @@ export class AppComponent{
   }
 
   download(){
+  
     this.http.get('https://ytd-backend-ishanrohatgi.vercel.app/', { withCredentials: true, params: { url: this.videoLink, title : this.videoTitle}, responseType: 'blob' }).subscribe((res: Blob) => {
       const downloadUrl = URL.createObjectURL(res);
       const link = document.createElement('a');
